@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #3d3d3d;
+}
+
+.nav {
+  height: 8rem;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 600px;
+  margin: 2.5rem auto;
+  font-size: 1.8rem;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.8rem;
+}
+
+.form__input {
+  font-size: inherit;
+  padding: 0.8rem 1rem;
+  outline: none;
+  border: 0.3rem solid #d3eaeb;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.form__submit {
+  font-size: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.8rem 2rem;
+  margin-top: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: lightblue;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  border-color: #3d3d3d;
+}
+
+.table__label {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.table__label--isbn {
+  width: 25%;
+}
+
+.table__label--delete {
+  width: 10%;
+}
+
+.table__data {
+  width: 100%;
+}
+
+.table__info:not(:last-child) {
+  padding: 0 1rem;
+}
+
+th,
+td {
+  border: 1px solid black;
+}
+
+#delete-data__btn {
+  width: 100%;
+  padding: 0.5rem 0;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  color: currentColor;
+}
+/*# sourceMappingURL=main.css.map */

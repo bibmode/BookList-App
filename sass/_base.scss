@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Noto Sans JP", sans-serif;
+  color: rgb(61, 61, 61);
+}
+
+.nav {
+  height: 8rem;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+  margin: 2.5rem auto;
+  font-size: 1.8rem;
+}

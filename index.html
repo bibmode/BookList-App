@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/main.css" />
+    <title>BookList</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <h1 class="nav__title">BookList</h1>
+    </nav>
+
+    <div class="container">
+      <form class="form">
+        <label for="title" class="label__title form__label">Title</label>
+        <input type="text" id="title" class="input__title form__input" />
+
+        <label for="author" class="label__author form__label">Author</label>
+        <input type="text" id="author" class="input__author form__input" />
+
+        <label for="isbn" class="label__isbn form__label">ISBN No.</label>
+        <input type="text" id="isbn" class="input__isbn form__input" />
+        <input type="submit" class="form__submit" />
+      </form>
+
+      <table class="table">
+        <tr class="table__head">
+          <th class="table__label">Title</th>
+          <th class="table__label">Author</th>
+          <th class="table__label table__label--isbn">ISBN No.</th>
+          <th class="table__label table__label--delete"></th>
+        </tr>
+        <tr class="table__data">
+          <!-- <td class="table__info" id="title-data"></td>
+          <td class="table__info" id="author-data"></td>
+          <td class="table__info" id="isbn-data"></td>
+          <td class="table__info" id="delete-data">
+            <button id="delete">X</button>
+          </td> -->
+        </tr>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
