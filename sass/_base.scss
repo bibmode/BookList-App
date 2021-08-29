@@ -20,7 +20,7 @@ body {
 
 .nav {
   height: 8rem;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,4 +30,8 @@ body {
   width: 600px;
   margin: 2.5rem auto;
   font-size: 1.8rem;
+
+  @include respond(tablet) {
+    width: 90%;
+  }
 }

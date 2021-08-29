@@ -1,3 +1,11 @@
+.nav {
+  &__icon {
+    font-size: 3.5rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -24,6 +32,7 @@
     border-radius: 5px;
 
     text-transform: uppercase;
+    cursor: pointer;
   }
 }
 
@@ -39,10 +48,6 @@
 
     &--isbn {
       width: 25%;
-    }
-
-    &--delete {
-      width: 10%;
     }
   }
 
@@ -65,12 +70,38 @@ td {
   border: 1px solid black;
 }
 
-#delete-data__btn {
+#delete-data {
+  background-color: lightcoral;
+}
+
+.delete {
   width: 100%;
-  padding: 0.5rem 0;
-  outline: none;
+  font-size: 1.5rem;
+  padding: 0.9rem 1rem;
   border: none;
-  font-family: inherit;
-  font-size: 1.8rem;
-  color: currentColor;
+  outline: none;
+  border-radius: none;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.message {
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+
+  &__error {
+    background-color: lightcoral;
+    display: none;
+  }
+
+  &__success {
+    background-color: lightblue;
+    display: none;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
 }

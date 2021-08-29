@@ -28,6 +28,7 @@ class Book {
   }
 }
 
+//ui class
 class UI {
   static deleteBook(isbn) {
     //delete book on click
@@ -58,24 +59,38 @@ class UI {
     newBook.addBookToTable();
     this.deleteBook(formISBN);
   }
+
+  static showError() {
+    const errMsg = document.querySelector(".message__error");
+
+    errMsg.style.display = "block";
+
+    setTimeout(() => (errMsg.style.display = "none"), 3000);
+  }
+
+  static showSuccess() {
+    const successMsg = document.querySelector(".message__success");
+
+    successMsg.style.display = "block";
+
+    setTimeout(() => (successMsg.style.display = "none"), 3000);
+  }
 }
 
+//storage class
 class Storage {
   static storeNewBook(books) {
-    console.log(books);
     localStorage.setItem("books", JSON.stringify(books));
   }
 
   static showBooks() {
     const storedBooks = JSON.parse(localStorage.getItem("books"));
-    console.log(storedBooks);
+
     storedBooks.forEach((book) => {
       UI.instantiateBook(book.title, book.author, book.isbn);
     });
   }
 }
-
-//fill out form and create new book object
 
 //show stored books on reload
 document.addEventListener("DOMContentLoaded", () => {
@@ -85,17 +100,22 @@ document.addEventListener("DOMContentLoaded", () => {
 //click submit to add details to table
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const formTitle = document.querySelector("#title").value;
-  const formAuthor = document.querySelector("#author").value;
-  const formISBN = document.querySelector("#isbn").value;
+  const formTitle = document.querySelector("#title");
+  const formAuthor = document.querySelector("#author");
+  const formISBN = document.querySelector("#isbn");
 
   if (
-    formTitle.trim() !== "" &&
-    formAuthor.trim() !== "" &&
-    formISBN.trim() !== ""
+    formTitle.value.trim() !== "" &&
+    formAuthor.value.trim() !== "" &&
+    formISBN.value.trim() !== ""
   ) {
-    UI.instantiateBook(formTitle, formAuthor, formISBN);
-  } else alert("Fill in all fields!");
-});
+    UI.instantiateBook(formTitle.value, formAuthor.value, formISBN.value);
+    UI.showSuccess();
 
-//save to local storage
+    formTitle.value = "";
+    formAuthor.value = "";
+    formISBN.value = "";
+  } else {
+    UI.showError();
+  }
+});

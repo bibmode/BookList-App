@@ -1,0 +1,7 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 40.81em) {
+      @content;
+    }
+  }
+}
