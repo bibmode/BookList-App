@@ -38,8 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Frontend mentor profile](https://www.frontendmentor.io/solutions/desktopfirst-approach-with-rest-countries-scss-and-vanilla-javascript-4kWRNN1yo)
-- Live Site URL: [Where in the world?](https://whereintheworld-gen.netlify.app/#)
+- Live Site URL: [BookList](https://bibmode.github.io/BookList-App/)
 
 ## My process
 
