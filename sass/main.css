@@ -105,6 +105,10 @@ body {
   width: 25%;
 }
 
+.table__label--delete {
+  min-width: 10px;
+}
+
 .table__data {
   width: 100%;
 }

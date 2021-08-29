@@ -49,9 +49,10 @@
     &--isbn {
       width: 25%;
     }
-  }
 
-  &__head {
+    &--delete {
+      min-width: 10px;
+    }
   }
 
   &__data {
